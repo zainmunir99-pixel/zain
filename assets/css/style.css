@@ -1,8 +1,8 @@
 /* ===== Design Tokens ===== */
 :root{
-  --navy:#0A2342;
-  --navy-deep:#061527;
-  --navy-mid:#123258;
+  --navy:#06331B;
+  --navy-deep:#02180D;
+  --navy-mid:#0E5C34;
   --emerald:#049444;
   --emerald-dark:#036F33;
   --emerald-pale:#E7F4EC;
@@ -14,9 +14,9 @@
   --ink:#101826;
   --muted:#5B6472;
   --border:#E7E3D8;
-  --shadow-sm:0 2px 10px rgba(10,35,66,.06);
-  --shadow-md:0 14px 32px rgba(10,35,66,.10);
-  --shadow-lg:0 26px 64px rgba(10,35,66,.18);
+  --shadow-sm:0 2px 10px rgba(6,51,27,.06);
+  --shadow-md:0 14px 32px rgba(6,51,27,.10);
+  --shadow-lg:0 26px 64px rgba(6,51,27,.18);
   --radius:14px;
   --radius-sm:10px;
   --container:1220px;
@@ -146,7 +146,7 @@ strong{color:var(--ink);}
   padding:80px 0 60px;
   background:
     radial-gradient(640px 320px at 92% -10%, rgba(4,148,68,.14), transparent),
-    radial-gradient(520px 300px at -5% 10%, rgba(10,35,66,.07), transparent);
+    radial-gradient(520px 300px at -5% 10%, rgba(6,51,27,.07), transparent);
   overflow:hidden;
 }
 .hero-inner{

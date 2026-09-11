@@ -16,9 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Scroll reveal
+  // Scroll reveal (progressive enhancement — elements are visible by default
+  // in CSS; only opt into the hidden-then-fade-in treatment once JS confirms
+  // it can also bring them back via .in-view)
   const revealEls = document.querySelectorAll('[data-reveal]');
   if ('IntersectionObserver' in window) {
+    revealEls.forEach(el => el.classList.add('reveal-pending'));
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -28,8 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { threshold: 0.15 });
     revealEls.forEach(el => io.observe(el));
-  } else {
-    revealEls.forEach(el => el.classList.add('in-view'));
   }
 
   // Animated counters

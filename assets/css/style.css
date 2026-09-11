@@ -528,8 +528,13 @@ strong{color:var(--ink);}
 #backToTop:hover{background:var(--emerald-dark);}
 
 /* ===== Reveal animation ===== */
-[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
-[data-reveal].in-view{opacity:1;transform:translateY(0);}
+/* Visible by default so content never depends on JS to appear (safe if a
+   script tag is stripped/blocked/delayed, e.g. inside a page-builder widget).
+   JS opts elements into the hidden-then-fade-in treatment by adding
+   .reveal-pending; without JS, [data-reveal] elements just stay visible. */
+[data-reveal]{opacity:1;transform:none;}
+[data-reveal].reveal-pending{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+[data-reveal].reveal-pending.in-view{opacity:1;transform:translateY(0);}
 
 /* ===== Responsive ===== */
 @media (max-width:1024px){

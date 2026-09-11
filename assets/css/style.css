@@ -264,6 +264,35 @@ strong{color:var(--ink);}
 .credential-row strong{display:block;color:#fff;font-size:.92rem;}
 .credential-row span{font-size:.82rem;color:#b7c5d6;}
 
+/* ===== Mini CTA banner ===== */
+.mini-cta{padding:0 0 0;background:var(--bg);}
+.mini-cta-inner{
+  background:var(--emerald);
+  border-radius:20px;
+  padding:32px 44px;
+  margin:48px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+  box-shadow:var(--shadow-md);
+}
+.mini-cta-inner p{
+  color:#fff;
+  font-weight:700;
+  font-size:1.35rem;
+  margin:0;
+}
+.btn-pill-amber{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--amber);color:var(--navy-deep);
+  font-weight:800;font-size:.8rem;letter-spacing:.03em;text-transform:uppercase;
+  padding:15px 32px;border-radius:999px;white-space:nowrap;
+  transition:background .2s ease,color .2s ease,transform .15s ease;
+}
+.btn-pill-amber:hover{background:var(--amber-dark);color:#fff;transform:translateY(-2px);}
+
 /* ===== Flagship (Medical Billing) spotlight ===== */
 .flagship{
   background:linear-gradient(180deg,var(--navy-deep),var(--navy));
@@ -561,6 +590,8 @@ strong{color:var(--ink);}
   .nav-toggle{display:flex;}
   .header-cta{display:none;}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:32px;}
+  .mini-cta-inner{flex-direction:column;text-align:center;padding:28px 24px;}
+  .mini-cta-inner p{font-size:1.1rem;}
   .services-grid,.pricing-grid,.testimonial-grid,.process-grid,.eeat-grid,.about-highlights{grid-template-columns:1fr;}
   .price-featured{transform:none;}
   .footer-grid{grid-template-columns:1fr;}
